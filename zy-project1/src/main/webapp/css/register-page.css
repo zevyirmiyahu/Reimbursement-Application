@@ -1,0 +1,27 @@
+h1 {
+    /*text-align: center;*/
+    margin-left: 20%;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.button-style {
+    background-color: black;
+    /* #ff8a24; */
+    border-color: black; 
+     /* #ff8a24; */
+}
+
+.form-style {
+    text-align: center;
+}
+
+#img {
+    z-index:2; 
+    position: absolute; 
+    top: 10%; 
+    left:50%;
+    width: 40%;
+}

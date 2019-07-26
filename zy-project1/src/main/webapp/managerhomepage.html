@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Homepage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/register-page.css" rel="stylesheet">
+
+    <!--Font awesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+    </nav>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs navbar-dark bg-dark" id="navId">
+        <li class="nav-item">
+            <a class="col-lg-3 navbar-brand" href="#">wolf<b>REPAY</b></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="col-lg-3 navbar-brand" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">Reimburstment</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#tab2Id" onclick="elementHidder1()">Submit Request</a>
+                <a class="dropdown-item" href="#tab3Id" onclick="elementHidder2()">View Sent Requests</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#tab4Id" onclick="elementHidder3()">Personal Information</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a href="#tab5Id" class="col-lg-3 navbar-brand">
+                <i class="fa fa-sign-out fa-lg" style="color: white" aria-hidden="true"></i>Logout
+            </a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+    </div>
+
+    <script>
+        $('#navId a').click(e => {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    </script>
+
+    <div class="jumbotron">
+        <h1 class="display-3">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            wolf<b>REPAY</b>
+        </h1>
+        <p class="lead">wolf<b>REPAY</b> the only way to send timely reimburstment requests.</p>
+    </div>
+    <div class="container">  
+        <div class="row">
+            <div class="col-sm-6" id="request-form">
+                <form method="POST" action="/zy-project1/RegistrationServlet">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Amount:</b></label>
+                        <div class="col-sm-3">
+                            <input name="amount" type="text" class="form-control" placeholder="Amount">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Date:</b></label>
+                        <div class="col-sm-5">
+                            <input type="Date" class="form-control" name="date">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Description:</b></label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="description" placeholder="About Request">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <input type="submit" class="col-lg-2 btn btn-primary button-style" value="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-3" id="request-information">
+                <h3>Request Information</h3>
+                <p name="request-information">
+                    Request information
+                </p>
+            </div>
+            <div class="col-sm-3" id="user-information">
+                <h3>Personal Information</h3>
+                <p name="user-information">
+                    User information 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="homepage.js"></script>
+</body>
+
+</html>
