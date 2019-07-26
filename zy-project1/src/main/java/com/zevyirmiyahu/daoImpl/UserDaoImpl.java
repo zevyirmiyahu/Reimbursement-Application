@@ -85,7 +85,6 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public void viewInformation(User user) { // only gets information
-
 	}
 
 	@Override
